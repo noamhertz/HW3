@@ -1,0 +1,3 @@
+C:/Users/Asafr/Desktop/SharedWithUbuntu/Compilation/HW333/cmake-build-debug/CMakeFiles/HW333.dir
+C:/Users/Asafr/Desktop/SharedWithUbuntu/Compilation/HW333/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/Asafr/Desktop/SharedWithUbuntu/Compilation/HW333/cmake-build-debug/CMakeFiles/rebuild_cache.dir
