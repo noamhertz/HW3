@@ -12,20 +12,18 @@
 
 using namespace std;
 
-typedef enum {INT, FLOAT, VOID} IntOrFloat;
-
 class Symbol {
 private:
-    IntOrFloat type;
+    string name;
+    Type type;
     int size;
     int offset;
 
 public:
     Symbol (int size); //regular constructor
-    //Symbol (IntOrFloat type, int size); //TODO: remove if not used at all, if not needed
     ~Symbol();
-    IntOrFloat getType() const;
-    void setType(IntOrFloat type);
+    Type getType() const;
+    void setType(Type type);
     int getSize() const;
     void setSize(int size);
     int getOffset() const;

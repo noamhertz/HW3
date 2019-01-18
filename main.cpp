@@ -41,7 +41,7 @@ int main(int argc, char* argv[]) {
     yyin = fopen(argv[1], "r");
     yyparse();
 
-    quadBuf.printQuadsBufferAndHeaders(funcTable); //printing all the buffer out
+    quadBuf.printQuadsBufferAndHeaders(funcTable); //printing all the buffer out when finished
     cout.rdbuf(coutBuf); //return of the king
     fclose(yyin);
 

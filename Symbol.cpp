@@ -15,11 +15,11 @@ Symbol::Symbol(int size) : type(INT), size(size), offset(scopeOffset){
 
 Symbol::~Symbol() = default;
 
-IntOrFloat Symbol::getType() const {
+Type Symbol::getType() const {
     return type;
 }
 
-void Symbol::setType(IntOrFloat type) {
+void Symbol::setType(Type type) {
     this->type = type;
 }
 

@@ -6,16 +6,16 @@
 #include <iostream>
 #include <string>
 
-Function::Function(IntOrFloat retType, int startLine, pSymbolTable fSymbolTable) : retType(retType),
+Function::Function(Type retType, int startLine, pSymbolTable fSymbolTable) : retType(retType),
     startLine(startLine), fSymbolTable(fSymbolTable){}
 
 Function::~Function() = default;
 
-IntOrFloat Function::getRetType() const {
+Type Function::getRetType() const {
     return retType;
 }
 
-void Function::setRetType(IntOrFloat retType) {
+void Function::setRetType(Type retType) {
     this->retType = retType;
 }
 
@@ -34,11 +34,11 @@ void Function::setFSymbolTable(pSymbolTable fSymbolTable) {
     this->fSymbolTable = fSymbolTable;
 }
 
-vector<IntOrFloat> Function::getParametersTypes() {
+vector<Type> Function::getParametersTypes() {
     return parametersTypes;
 }
 
-void Function::setParametersTypes(vector<IntOrFloat> parametersTypes) {
+void Function::setParametersTypes(vector<Type> parametersTypes) {
     this->parametersTypes = parametersTypes;
 }
 

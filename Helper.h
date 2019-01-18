@@ -20,18 +20,19 @@
 
 using namespace std;
 
-typedef enum {INT, FLOAT} IntOrFloat;
+typedef enum {UNIMPLEMENTED, IMPLEMENTED} FuncStatus;
+typedef enum {INT, FLOAT} Type;
 
 //global variables
 extern Quad quadsBuffer;
 extern int scopeRegisterCounter[2]; //counters for int/float registers
 extern int scopeOffset; //the offset in the stack
-extern IntOrFloat returnType; //the return type from a function, to be compared with the desired return type in the parser
+extern Type returnType; //the return type from a function, to be compared with the desired return type in the parser
 extern vector<string> parameterInsertionOrder; //TODO: understand what is this!?!?!?!
 
 //the new yystype for the parser to use
 typedef struct {
-    IntOrFloat type;
+    Type type;
     string content;
     int regNum;
     int offset;
@@ -48,7 +49,7 @@ typedef struct {
 
     //for functions (FUNC_ARGLIST) TODO: check what are these for, how to use them?
     vector<int> parameterRegisters;
-    vector<IntOrFloat> parameterType;
+    vector<Type> parameterType;
 
 } yystype;
 

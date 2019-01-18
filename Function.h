@@ -12,30 +12,28 @@
 #include <map>
 #include <list>
 
-typedef enum FuncStatus{UNIMPLEMENTED, IMPLEMENTED} FuncStatus;
-
 class Function {
 private:
-    IntOrFloat retType; //what is the type of what's returning from the function
+    Type retType; //what is the type of what's returning from the function
     int startLine; //in case the function is called but not yet implemented -> this is where it actually starts
     FuncStatus funcStatus;
     string funcName;
     pSymbolTable fSymbolTable; //the function's symbol table
-    vector<IntOrFloat> parametersTypes; //pretty self explanatory
+    vector<Type> parametersTypes; //pretty self explanatory
     vector<string> parametersNames; //pretty self explanatory
     list<int> callLines; //stores the places where the function is being called
 public:
-    Function(IntOrFloat retType, int startLine, pSymbolTable fSymbolTable);
+    Function(Type retType, int startLine, pSymbolTable fSymbolTable);
     ~Function();
 
-    IntOrFloat getRetType() const;
-    void setRetType(IntOrFloat retType);
+    Type getRetType() const;
+    void setRetType(Type retType);
     int getStartLine() const;
     void setStartLine(int startLine);
     const pSymbolTable getFSymbolTable() const;
     void setFSymbolTable(pSymbolTable fSymbolTable);
-    vector<IntOrFloat> getParametersTypes();
-    void setParametersTypes(vector<IntOrFloat> parametersTypes);
+    vector<Type> getParametersTypes();
+    void setParametersTypes(vector<Type> parametersTypes);
     vector<string> getParametersNames();
     void setParametersNames(vector<string> parametersNames);
     list<int> getCallLines() ;
